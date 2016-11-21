@@ -43,8 +43,16 @@ for each in range (20, 10, -1):
 #oh my gosh.  Didn't get the fact that the list comprehension is just the end line haha.
 #I've been doing a loop and a list for no reason. Cool.  Lets try this again :)
 
-I_can_List_things = [print each for each in range (10, 20, 1)]
-                     
+I_can_List_things = [each for each in range (10, 20, 1)]
+I_can_List_things
+#Got it!  Got all my little numbers.  Except 20.  soooo
+I_can_List_things = [each for each in range (10, 21, 1)]
+#Bam.  Done.
+#Interesting note.....I_can_List_things = [each in range (10, 21, 1)] gives me [True]
+
+
+
+
 ###3### Write a loop that prints out only the numbers from 20 to 10 that are even.
 for i in range(20, 10, -2):
     print(i)
@@ -53,7 +61,43 @@ for i in range(20, 9, -2):
     print(i)
 #Bam.  Even numbers.
 
-#4. Write a list comprehension that prints out only the numbers from 20 to 10 that are even
-
-#5. Write a function that calculates whether a number is a prime number
     
+
+###4### Write a list comprehension that prints out only the numbers from 20 to 10 that are even
+I_can_list_even_things = [each for each in range (10, 21, 2)]
+I_can_list_even_things
+#It'sss alive!
+
+
+
+###5### Write a function that calculates whether a number is a prime number
+#hmmmm. my R code was
+#is_prime <- function (num) {
+#  if (num == 2) {
+#    TRUE
+#  } else if (any(num%%2:(num-1)==0)) { # see example function of a "any
+#    FALSE
+#  } else {
+#      TRUE
+#    }
+#  }
+
+#is_prime(7)
+
+#Your R code was:
+#is.prime <- function(x){
+#    if(x==1)
+#        return(FALSE)
+#    for(each in (x-1):2)
+#        if((x %% each) == 0)
+#            return(FALSE)
+#    return(TRUE)
+#}
+
+#so would be sort of similar, different syntax.  Possible to call functions as we did
+#In R, but objects also have methods associated with it. Call by name language,
+#saves resources  by not copying information from an argument into a new variable.
+
+
+optimus_PRIME = [
+
