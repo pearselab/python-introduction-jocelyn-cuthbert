@@ -99,5 +99,57 @@ I_can_list_even_things
 #saves resources  by not copying information from an argument into a new variable.
 
 
-optimus_PRIME = [
+def optimus_PRIME (x):
+    if x == 1:
+        return "get outta hur"
+    for each in (x-1),2:
+        if x %% each ==0
+            return "nooooo"
+    return "true"
 
+#invalid syntax at the %%.  not super shocked.  Change it to one % and its invalid syntaxo n the whole line.
+#oh yeah.  : out the wazzoo
+#Fixed it. 
+
+def optimus_PRIME (x):
+    if x < 1:
+        return "get outta hur"
+    for each in (x-1),2:
+        if x % each ==0:
+            return "nooooo"
+    return "so PRIME"
+
+
+
+####6###  Write a function that laods a text file, loops over the lines in it and
+#prints out the fifth character on the fifth line of that file.
+
+with open ("textytextertext.txt") as f:
+    for l in handle:
+        print(row[5])
+
+
+####7###   Write a loop that prints out the numbers from 1-20, printing Good:NUMBER if it is divisible
+ # by 5 and "Job:NUMBER" if its prime and nothing otherwise
+ 
+for i in range (1, 20, 1):
+    if i % 5 == 0:
+        print "good", i
+    elif optimus_PRIME(i) == "so PRIME":
+        print "prime", i
+#Error missing paranthesis in call to "print"
+#also realized I don't need 1-20, by 1.  I just need range of 20 I think
+for i in range (20):
+    if i % 5 == 0:
+        print ("good", i)
+    elif optimus_PRIME(i) == "so PRIME":
+        print ("prime", i)
+# Traceback (most recent call last):
+#  File "<pyshell#27>", line 4, in <module>
+#    elif optimus_PRIME(i) == "so PRIME":
+#  File "<pyshell#22>", line 5, in optimus_PRIME
+#    if x % each ==0:
+#ZeroDivisionError: integer division or modulo by zero
+
+
+        
