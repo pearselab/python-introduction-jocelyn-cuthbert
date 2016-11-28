@@ -152,4 +152,97 @@ for i in range (20):
 #ZeroDivisionError: integer division or modulo by zero
 
 
-        
+
+####8####  Biologist is modeling population growth using a Gompertz curve, which is defined as
+#y(t) =a.e^-b.e^-c.x where:
+#y=population size
+#t is time
+#a and b are parameters
+#and e is exponential function
+#Write a function that calculates population size for any values in its parameters
+
+# R code = gompertz <- function(a, b, c, t) a * exp(-b * exp(-c * t))
+def GOMGOM(a, b, c, t):
+    a * exp(-b * exp(-c * t))
+#NameError: name 'exp' is not defined
+
+import math
+from math import exp
+#no errors but nothing printed.  If nothing is stored notihng can print soooo
+def GOMGOM(a, b, c, t):
+    GOM = a * exp(-b * exp(-c * t))
+    return GOM
+#YAY!!
+
+####9####  Write a function that draws boxes of specified width and width with stars
+#IN R
+#box <- function(height, width){
+#    .row <- function(x)
+#        cat(rep("*",x),"\n", sep="")
+#    
+#    if(height < 3)
+#        stop("Can't make a box of this height")
+#    if(width < 1)
+#        stop("Can't make a box of this width")
+#    spacer <- height - 2
+#    
+#    .row(width)
+#    for(i in seq_len(spacer))
+#        cat("*", rep(" ",width-2), "*\n", sep="")
+#    .row(width)
+#}
+#box(5, 7)
+
+def BOXES_YO ("height", "width"):
+    def rowz(x):
+        cat(rep("*",x),"\n", sep="")
+
+    if(height <3):
+        stop("Can't H")
+    if(width <3):
+        stop("Can't W")
+    spacer = height-2
+
+    rowz(width)
+    for (i in seq_len(spacer)):
+        cat("*", rep(" ", width-2), "*\n", sep="")
+    rowz(width)
+#SyntaxError: invalid syntax
+def BOXES_YO ("height", "width"):
+    
+
+####10####  Implement a point class that holds x and y information for a point in space (don't plot) 
+#IN R
+#new.point <- function(x, y){
+#    if(!is.numeric(x) | !is.numeric(y))
+#        stop("Can only create a point with numerical position data")
+#
+#    output <- list(x=x, y=y)
+#    class(output) <- "point"
+#    return(output)
+#}
+#new.point(3, 10)
+
+
+####11#### Write a distance method that calculates the distance between two points in space. 
+#IN R
+#dist.points <- function(one, two){
+#    if(!inherits(one, "point") | !inherits(two, "point"))
+#        stop("Can only calculate distance between points")
+#
+#    return(sqrt((one$x-two$x)^2 + (one$y-two$y)^2))
+#}
+#dist.points(new.point(3,5), new.point(7,4))
+
+####12####  Implement a line class that takes two point objects and makes a line between (don't plot)
+#IN R
+#new.line <- function(start, end){
+#    if(!inherits(start, "point") | !inherits(end, "point"))
+#        stop("Can only construct a line from points")
+#
+#    output <- list(start=start, end=end)
+#    class(output) <- "line"
+#    return(output)
+#}
+#new.line(new.point(3,5), new.point(7,4))
+
